@@ -10,6 +10,10 @@ import random
 #Funcion multimodal: f(x)= x^4 -4x^3 -4x^2 + 12x  
 fun_objetivo = lambda x: x**4 - 4*x**3 -4*x**2 + 12*x
 
+#Funcion ????
+import math
+fun_objetivo = lambda x: math.sin(x) + math.sin(10*x) + math.log(x**2 + 1)
+
 class Particula:
     def __init__(self, posicion: list, velocidad: list, cognitivo: float, social:float, inercia: float):
         self.posicion  = posicion
@@ -85,9 +89,9 @@ def PSO(num_particulas: int,bordes_x: list, dim: int, max_iter: int):
 
 
 if __name__ == "__main__":
-    num_particulas = 2
+    num_particulas = 20
     max_iter = 100
-    bordes_x = (0, 10)  # dominio de TODAS las particulas (min, max) en el eje x
+    bordes_x = (-100, 100)  # dominio de TODAS las particulas (min, max) en el eje x
     global dim  #para no pasarlo como parametro de cada particula
     dim = 2
     PSO(num_particulas, bordes_x, 2, max_iter) 
