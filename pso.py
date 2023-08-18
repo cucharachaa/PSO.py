@@ -4,8 +4,6 @@
 # c1, c2 constantes definidas por nosotros
 # r1,r2 numeros aleatorios entre 0 y 1
 
-# Funcion unimodal, que solo tiene 1 optimo global
-
 import random
 
 # Función unimodal: f(x) = (x - 2)^2 + 3 (f(2) = 3; minimo global)
